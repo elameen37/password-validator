@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="box">
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+            <div class="container">
+                <div class="form">
+                    <h2>Password Checker</h2>
+                    <form>
+                        <div class="inputBx">
+                            <input type="password" class="password1" placeholder="Password">
+                        </div>
+                        <div class="inputBx">
+                            <input type="password" class="password2" placeholder="Password">
+                        </div>
+                        <div class="inputBx">
+                            <input type="submit" class="button" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.button').onclick = function(){
+            var password = document.querySelector('.password1').value,
+            confirmPassword = document.querySelector('.password2').value;
+
+            if(password == confirmPassword){
+                alert("Passwords Match");
+                return true
+            }
+            else if(password != confirmPassword){
+                alert('Sorry, passwords do not match')
+            }
+            return true
+        }
+    </script>
+</body>
+</html>
